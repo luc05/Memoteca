@@ -13,4 +13,7 @@ export class CriarPensamentoComponent {
     autoria: "Dev",
     modelo: ''
   }
+  criarPensamento(){
+    alert("Criar pensamento")
+  }
 }
