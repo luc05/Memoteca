@@ -1,0 +1,16 @@
+{
+  "pensamentos":[
+    {
+      "id": 1,
+      "conteudo": "Testando json server",
+      "autoria": "Dev",
+      "modelo": "modelo1"
+    },
+    {
+      "id": 2,
+      "conteudo": "Testando json server",
+      "autoria": "Dev",
+      "modelo": "modelo2"
+    }
+  ]
+}
