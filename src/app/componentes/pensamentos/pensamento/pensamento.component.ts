@@ -8,14 +8,12 @@ import { Pensamento } from '../pensamento';
 })
 export class PensamentoComponent {
   @Input() pensamento: Pensamento = {
-    id: 1,
-    conteudo: "I love Angular",
-    autoria: "Nay",
+    conteudo: "",
+    autoria: "",
     modelo: "modelo1"
   }
 
   larguraPensamento(): string {
-    debugger
     if(this.pensamento.conteudo.length >= 256){
       return "pensamento-g"
     }else{

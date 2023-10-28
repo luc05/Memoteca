@@ -1,5 +1,5 @@
 {
-  "pensamentos":[
+  "pensamentos": [
     {
       "id": 1,
       "conteudo": "Testando json server",
@@ -8,9 +8,21 @@
     },
     {
       "id": 2,
-      "conteudo": "Testando json server",
+      "conteudo": "Testando json server 2",
       "autoria": "Dev",
       "modelo": "modelo2"
+    },
+    {
+      "conteudo": "Testando o Crud/Criar",
+      "autoria": "Dev",
+      "modelo": "modelo3",
+      "id": 3
+    },
+    {
+      "conteudo": "Testando o router",
+      "autoria": "Dev2",
+      "modelo": "modelo2",
+      "id": 4
     }
   ]
 }
