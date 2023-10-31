@@ -4,7 +4,7 @@
       "id": 1,
       "conteudo": "Testando json server",
       "autoria": "Dev",
-      "modelo": "modelo1"
+      "modelo": "modelo3"
     },
     {
       "id": 2,
@@ -13,7 +13,7 @@
       "modelo": "modelo2"
     },
     {
-      "conteudo": "Testando o Crud/Criar",
+      "conteudo": "Testando o editar Pensamento",
       "autoria": "Dev",
       "modelo": "modelo3",
       "id": 3
