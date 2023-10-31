@@ -17,12 +17,6 @@
       "autoria": "Dev",
       "modelo": "modelo3",
       "id": 3
-    },
-    {
-      "conteudo": "Testando o router",
-      "autoria": "Dev2",
-      "modelo": "modelo2",
-      "id": 4
     }
   ]
 }
