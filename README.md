@@ -21,17 +21,21 @@ O projeto foi feito de acordo os cursos;
 
 # 🔨 Funcionalidades do projeto
 
+A aplicação possui todas as funcionalidades CRUD, criar, listar, editar e excluir pensamentos.
+
 # Tecnologias utilizadas
 
 ## Front End
 
-## React:
--JavaScript
+### Angular:
+-TypeScript
+
 -HTML
+
 -CSS
 
 ## Back End
-Dados foram adicionados de forma estática através de um arquivo Json.
+-Foi utilizado o JSON-Server para simular uma API REST
 
 # Como executar o projeto
 
@@ -39,4 +43,5 @@ Após clonar o projeto.
 1) npm i - baixa todas dependências necessárias.
 2) No diretorio memoteca - rode ng serve - roda a aplicação front-end
 3) No diretorio backend - rode npm start - roda a aplicação back-end
+   
    Obs: Ambos os diretorios estão dentro do projeto clonado.
