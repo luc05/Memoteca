@@ -6,6 +6,7 @@ A aplicação Memoteca é uma aplicação Angular, sendo um mural de pensamentos
 O projeto foi feito de acordo os cursos;
 
 - Angular 14: aplique os conceitos e desenvolva seu primeiro CRUD
+- Angular 14: evoluindo a aplicação
   
  Presente na Alura.
 
@@ -29,10 +30,14 @@ A aplicação possui todas as funcionalidades CRUD, criar, listar, editar e excl
 
 ### Angular:
 -TypeScript
-
 -HTML
-
 -CSS
+
+Na criação formúlario foi usado a classe [FormBuilder], para torna-lo reativo.
+
+Foi usado a diretiva [FormGroup], para fazer a ligação desse formúlario ao form do HTML.
+
+E a propriedade [FormControlName] em cada um dos atributos.
 
 ## Back End
 -Foi utilizado o JSON-Server para simular uma API REST
