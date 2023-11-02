@@ -1,27 +1,42 @@
 # Memoteca
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.1.
+# Sobre o projeto 
+A aplicação Memoteca é uma aplicação Angular, sendo um mural de pensamentos. Nele você poderá colocar citações de livros, trechos de música, e aquelas frases legais que você quer deixar de reserva para postar como legenda em suas selfies.
 
-## Development server
+O projeto foi feito de acordo os cursos;
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular 14: aplique os conceitos e desenvolva seu primeiro CRUD
+  
+ Presente na Alura.
 
-## Code scaffolding
+# Layout
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Página Inicial
+  
+![paginaInicial](https://github.com/luc05/Memoteca/assets/27972551/712175d8-8ecc-44ff-92a5-243169bdf344)
 
-## Build
+- Formulário de criação/edição de pensamentos
+  
+![formulario](https://github.com/luc05/Memoteca/assets/27972551/7cc65533-dfc8-43f4-817a-6b0a6acd1096)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# 🔨 Funcionalidades do projeto
 
-## Running unit tests
+# Tecnologias utilizadas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Front End
 
-## Running end-to-end tests
+## React:
+-JavaScript
+-HTML
+-CSS
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Back End
+Dados foram adicionados de forma estática através de um arquivo Json.
 
-## Further help
+# Como executar o projeto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Após clonar o projeto.
+1) npm i - baixa todas dependências necessárias.
+2) No diretorio memoteca - rode ng serve - roda a aplicação front-end
+3) No diretorio backend - rode npm start - roda a aplicação back-end
+   Obs: Ambos os diretorios estão dentro do projeto clonado.
