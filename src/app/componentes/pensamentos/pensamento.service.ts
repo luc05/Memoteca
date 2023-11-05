@@ -14,10 +14,13 @@ export class PensamentoService {
   listar(pagina: number): Observable<Pensamento[]>{
     const itensPorPagina = 2;
     let params = new HttpParams()
-      .set("_pagina", pagina)
+      .set("_page", pagina)
       .set("_limit", itensPorPagina)
-
     return this.http.get<Pensamento[]>(this.API, {params})
+  }
+
+  obterTotalDePensamentosNaBase() : Observable<Pensamento[]>{
+    return this.http.get<Pensamento[]>(this.API)
   }
 
   criar(pensamento: Pensamento): Observable<Pensamento>{
