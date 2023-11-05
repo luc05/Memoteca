@@ -16,18 +16,19 @@ export class ListarPensamentoComponent implements OnInit {
   haMaisPensamentos: boolean = true;
   totDePensamentosNaBase: number = 0;
   mostrarBotaoCarregarMaisPensamentos: boolean = true;
+  filtro: string = "";
 
   constructor(private service: PensamentoService) { }
 
   ngOnInit(): void {
-    this.service.listar(this.paginaAtual).subscribe((listaPensamentos) => {
+    this.service.listar(this.paginaAtual, this.filtro).subscribe((listaPensamentos) => {
       this.listaPensamentos = listaPensamentos
     })
     this.verificarSeTodosPensamentosJaEstaoSendoExibidos()
   }
 
   carregarMaisPensamentos() {
-    this.service.listar(++this.paginaAtual)
+    this.service.listar(++this.paginaAtual, this.filtro)
       .subscribe(listaPensamentos => {
         this.listaPensamentos.push(...listaPensamentos);
         if (!listaPensamentos.length) {
@@ -42,5 +43,13 @@ export class ListarPensamentoComponent implements OnInit {
       this.totDePensamentosNaBase = listaTotPensamentos.length;
       this.mostrarBotaoCarregarMaisPensamentos = this.totDePensamentosNaBase > this.listaPensamentos.length ? true : false;
     });
+  }
+
+  pesquisarPensamentos() {
+    var paginaAtual = 1;
+    this.haMaisPensamentos = true;
+    this.service.listar(paginaAtual, this.filtro).subscribe((listaPensamentos) => {
+      this.listaPensamentos = listaPensamentos
+    })
   }
 }

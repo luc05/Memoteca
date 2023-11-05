@@ -11,30 +11,35 @@ export class PensamentoService {
 
   constructor(private http: HttpClient) { }
 
-  listar(pagina: number): Observable<Pensamento[]>{
+  listar(pagina: number, filtro: string): Observable<Pensamento[]> {
     const itensPorPagina = 2;
     let params = new HttpParams()
       .set("_page", pagina)
       .set("_limit", itensPorPagina)
-    return this.http.get<Pensamento[]>(this.API, {params})
+
+    if (filtro.trim().length > 2) {
+      params = params.set("q", filtro)
+    }
+
+    return this.http.get<Pensamento[]>(this.API, { params })
   }
 
-  obterTotalDePensamentosNaBase() : Observable<Pensamento[]>{
+  obterTotalDePensamentosNaBase(): Observable<Pensamento[]> {
     return this.http.get<Pensamento[]>(this.API)
   }
 
-  criar(pensamento: Pensamento): Observable<Pensamento>{
+  criar(pensamento: Pensamento): Observable<Pensamento> {
     return this.http.post<Pensamento>(this.API, pensamento)
   }
-  excluir(id: number): Observable<Pensamento>{
+  excluir(id: number): Observable<Pensamento> {
     const url = `${this.API}/${id}`
     return this.http.delete<Pensamento>(url)
   }
-  editar(pensamento: Pensamento): Observable<Pensamento>{
+  editar(pensamento: Pensamento): Observable<Pensamento> {
     const url = `${this.API}/${pensamento.id}`
     return this.http.put<Pensamento>(url, pensamento)
   }
-  buscarPorId(id: number): Observable<Pensamento>{
+  buscarPorId(id: number): Observable<Pensamento> {
     const url = `${this.API}/${id}`
     return this.http.get<Pensamento>(url)
   }
