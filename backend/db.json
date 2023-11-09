@@ -5,7 +5,7 @@
       "conteudo": "Testando alterar o form Editar para reativo",
       "autoria": "Dev 2",
       "modelo": "modelo2",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": 2,
@@ -18,14 +18,14 @@
       "conteudo": "Testando o editar Pensamento",
       "autoria": "Dev",
       "modelo": "modelo3",
-      "favorito": false,
+      "favorito": true,
       "id": 3
     },
     {
       "conteudo": "Testando validações",
       "autoria": "Autor DEV",
       "modelo": "modelo1",
-      "favorito": false,
+      "favorito": true,
       "id": 4
     },
     {
