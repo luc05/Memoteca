@@ -17,6 +17,7 @@ export class ListarPensamentoComponent implements OnInit {
   totDePensamentosNaBase: number = 0;
   mostrarBotaoCarregarMaisPensamentos: boolean = true;
   filtro: string = "";
+  filtroMensagem: string = "";
 
   constructor(private service: PensamentoService) { }
 
@@ -49,6 +50,13 @@ export class ListarPensamentoComponent implements OnInit {
     var paginaAtual = 1;
     this.haMaisPensamentos = true;
     this.service.listar(paginaAtual, this.filtro).subscribe((listaPensamentos) => {
+      this.listaPensamentos = listaPensamentos
+    })
+  }
+  pesquisarPorMensagem(){
+    var paginaAtual = 1;
+    this.haMaisPensamentos = true;
+    this.service.listar(paginaAtual, this.filtro, this.filtroMensagem).subscribe((listaPensamentos) => {
       this.listaPensamentos = listaPensamentos
     })
   }

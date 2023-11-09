@@ -10,7 +10,18 @@
         [(ngModel)]="filtro"
         (keyup)="pesquisarPensamentos()"
         >
-        <img src="/assets/imagens/lupa.png" alt="lupa">
+    </div>
+
+    <div class="buscar-pensamentos">
+      <input
+          type="search"
+          class="filtro"
+          placeholder="Procurar por mensagem"
+          autofocus
+          [(ngModel)]="filtroMensagem"
+          (keyup)="pesquisarPorMensagem()"
+        >
+      <img src="/assets/imagens/lupa.png" alt="lupa">
     </div>
 
     <h2 class="ff-inter">Meu Mural</h2>
