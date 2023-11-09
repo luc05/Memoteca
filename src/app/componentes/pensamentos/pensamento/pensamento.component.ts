@@ -10,7 +10,8 @@ export class PensamentoComponent {
   @Input() pensamento: Pensamento = {
     conteudo: "",
     autoria: "",
-    modelo: "modelo1"
+    modelo: "modelo1",
+    favorito: false
   }
 
   larguraPensamento(): string {
@@ -19,5 +20,13 @@ export class PensamentoComponent {
     }else{
       return "pensamento-p"
     }
+  }
+
+  mudarIconeFavorito(): string {
+    debugger
+    if(this.pensamento.favorito == false){
+      return "inativo"
+    }
+    return "ativo"
   }
 }

@@ -4,43 +4,50 @@
       "id": 1,
       "conteudo": "Testando alterar o form Editar para reativo",
       "autoria": "Dev 2",
-      "modelo": "modelo2"
+      "modelo": "modelo2",
+      "favorito": false
     },
     {
       "id": 2,
       "conteudo": "Lucas",
       "autoria": "Lucas",
-      "modelo": "modelo2"
+      "modelo": "modelo2",
+      "favorito": true
     },
     {
       "conteudo": "Testando o editar Pensamento",
       "autoria": "Dev",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 3
     },
     {
       "conteudo": "Testando validações",
       "autoria": "Autor DEV",
       "modelo": "modelo1",
+      "favorito": false,
       "id": 4
     },
     {
       "conteudo": "Testando botão Exibir mais",
       "autoria": "Dev 2",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 5
     },
     {
       "conteudo": "teste 2",
       "autoria": "teste",
       "modelo": "modelo1",
+      "favorito": false,
       "id": 6
     },
     {
       "id": 7,
       "conteudo": "carregar",
       "autoria": "teste",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": false
     }
   ]
 }
