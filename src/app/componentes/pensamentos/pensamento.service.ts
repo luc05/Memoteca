@@ -11,7 +11,7 @@ export class PensamentoService {
 
   constructor(private http: HttpClient) { }
 
-  listar(pagina: number, filtro: string, filtroMensagem: string = ""): Observable<Pensamento[]> {
+  listar(pagina: number, filtro: string, filtroMensagem: string = "", favoritos: boolean): Observable<Pensamento[]> {
     const itensPorPagina = 2;
     let params = new HttpParams()
       .set("_page", pagina)
@@ -23,7 +23,9 @@ export class PensamentoService {
     if(filtroMensagem.trim().length > 2){
       params = params.set("conteudo", filtroMensagem)
     }
-
+    if(favoritos == true){
+      params = params.set("favorito", favoritos)
+    }
     return this.http.get<Pensamento[]>(this.API, { params })
   }
 

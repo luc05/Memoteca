@@ -15,6 +15,9 @@ export class PensamentoComponent {
     favorito: false
   }
 
+  @Input() listaFavoritos: Pensamento[] = [];
+  @Input() paginaAtual: number = 1;
+
   constructor(
     private service: PensamentoService,
   ) { }
@@ -28,7 +31,6 @@ export class PensamentoComponent {
   }
 
   mudarIconeFavorito(): string {
-    debugger
     if(this.pensamento.favorito == false){
       return "inativo"
     }
@@ -36,6 +38,8 @@ export class PensamentoComponent {
   }
 
   alterarFavorito() {
-    this.service.mudarFavorito(this.pensamento).subscribe()
+    this.service.mudarFavorito(this.pensamento).subscribe(() => {
+      this.listaFavoritos.splice(this.listaFavoritos.indexOf(this.pensamento), 1)
+    })
   }
 }

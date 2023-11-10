@@ -18,18 +18,21 @@ export class ListarPensamentoComponent implements OnInit {
   mostrarBotaoCarregarMaisPensamentos: boolean = true;
   filtro: string = "";
   filtroMensagem: string = "";
+  favoritos: boolean = false;
+  listaFavoritos: Pensamento[] = [];
+  devePaginaParaTela1: boolean = false;
 
   constructor(private service: PensamentoService) { }
 
   ngOnInit(): void {
-    this.service.listar(this.paginaAtual, this.filtro).subscribe((listaPensamentos) => {
+    this.service.listar(this.paginaAtual, this.filtro, this.filtroMensagem, this.favoritos).subscribe((listaPensamentos) => {
       this.listaPensamentos = listaPensamentos
     })
     this.verificarSeTodosPensamentosJaEstaoSendoExibidos()
   }
 
   carregarMaisPensamentos() {
-    this.service.listar(++this.paginaAtual, this.filtro)
+    this.service.listar(++this.paginaAtual, this.filtro, this.filtroMensagem, this.favoritos)
       .subscribe(listaPensamentos => {
         this.listaPensamentos.push(...listaPensamentos);
         if (!listaPensamentos.length) {
@@ -48,16 +51,32 @@ export class ListarPensamentoComponent implements OnInit {
 
   pesquisarPensamentos() {
     var paginaAtual = 1;
+    this.mostrarBotaoCarregarMaisPensamentos = true;
+    this.paginaAtual = paginaAtual;
     this.haMaisPensamentos = true;
-    this.service.listar(paginaAtual, this.filtro).subscribe((listaPensamentos) => {
+    this.favoritos = false;
+    this.service.listar(paginaAtual, this.filtro, this.filtroMensagem, this.favoritos).subscribe((listaPensamentos) => {
       this.listaPensamentos = listaPensamentos
     })
   }
   pesquisarPorMensagem(){
     var paginaAtual = 1;
+    this.paginaAtual = paginaAtual;
+    this.mostrarBotaoCarregarMaisPensamentos = true;
     this.haMaisPensamentos = true;
-    this.service.listar(paginaAtual, this.filtro, this.filtroMensagem).subscribe((listaPensamentos) => {
+    this.service.listar(paginaAtual, this.filtro, this.filtroMensagem, this.favoritos).subscribe((listaPensamentos) => {
       this.listaPensamentos = listaPensamentos
+    })
+  }
+  filtrarFavoritos(){
+    var paginaAtual = 1;
+    this.paginaAtual = paginaAtual;
+    this.haMaisPensamentos = true;
+    this.mostrarBotaoCarregarMaisPensamentos = true;
+    this.favoritos = true;
+    this.service.listar(paginaAtual, this.filtro, this.filtroMensagem, this.favoritos).subscribe((listaPensamentosFavoritos) => {
+      this.listaPensamentos = listaPensamentosFavoritos
+      this.listaFavoritos = listaPensamentosFavoritos
     })
   }
 }

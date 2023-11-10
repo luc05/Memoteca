@@ -24,14 +24,25 @@
       <img src="/assets/imagens/lupa.png" alt="lupa">
     </div>
 
-    <h2 class="ff-inter">Meu Mural</h2>
+    <div class="botoes">
+    <button (click)="pesquisarPensamentos()" class="botao">
+      Meu Mural
+    </button>
+    <button (click)="filtrarFavoritos()" class="botao">
+      Meus favoritos
+    </button>
     <button routerLink="/criarPensamento" class="botao">
       Adicionar pensamento
     </button>
+    </div>
   </header>
+  <h2 class="ff-inter">Meu Mural</h2>
   <div class="mural" *ngIf="listaPensamentos.length > 0, else semPensamentos">
     <div *ngFor="let pensamento of listaPensamentos">
-      <app-pensamento [pensamento]="pensamento"></app-pensamento>
+      <app-pensamento
+      [pensamento]="pensamento"
+      [listaFavoritos]="listaFavoritos"
+      ></app-pensamento>
     </div>
   </div>
   <app-botao-carregar-mais [haMaisPensamentos]="haMaisPensamentos" *ngIf="mostrarBotaoCarregarMaisPensamentos==true"

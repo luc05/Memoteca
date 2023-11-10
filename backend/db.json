@@ -2,7 +2,7 @@
   "pensamentos": [
     {
       "id": 1,
-      "conteudo": "Testando alterar o form Editar para reativo",
+      "conteudo": "Lucas",
       "autoria": "Dev 2",
       "modelo": "modelo2",
       "favorito": true
@@ -12,20 +12,20 @@
       "conteudo": "Lucas",
       "autoria": "Lucas",
       "modelo": "modelo2",
-      "favorito": true
+      "favorito": false
     },
     {
       "conteudo": "Testando o editar Pensamento",
       "autoria": "Dev",
       "modelo": "modelo3",
-      "favorito": true,
+      "favorito": false,
       "id": 3
     },
     {
       "conteudo": "Testando validações",
       "autoria": "Autor DEV",
       "modelo": "modelo1",
-      "favorito": true,
+      "favorito": false,
       "id": 4
     },
     {
