@@ -20,7 +20,7 @@ export class ListarPensamentoComponent implements OnInit {
   filtroMensagem: string = "";
   favoritos: boolean = false;
   listaFavoritos: Pensamento[] = [];
-  devePaginaParaTela1: boolean = false;
+  titulo: string = "Meu Mural"
 
   constructor(private service: PensamentoService) { }
 
@@ -50,25 +50,26 @@ export class ListarPensamentoComponent implements OnInit {
   }
 
   pesquisarPensamentos() {
-    var paginaAtual = 1;
+    this.titulo = "Meu Mural";
     this.mostrarBotaoCarregarMaisPensamentos = true;
-    this.paginaAtual = paginaAtual;
+    this.paginaAtual = 1;
     this.haMaisPensamentos = true;
     this.favoritos = false;
-    this.service.listar(paginaAtual, this.filtro, this.filtroMensagem, this.favoritos).subscribe((listaPensamentos) => {
+    this.service.listar(this.paginaAtual, this.filtro, this.filtroMensagem, this.favoritos).subscribe((listaPensamentos) => {
       this.listaPensamentos = listaPensamentos
     })
   }
+
   pesquisarPorMensagem(){
-    var paginaAtual = 1;
-    this.paginaAtual = paginaAtual;
+    this.paginaAtual = 1;
     this.mostrarBotaoCarregarMaisPensamentos = true;
     this.haMaisPensamentos = true;
-    this.service.listar(paginaAtual, this.filtro, this.filtroMensagem, this.favoritos).subscribe((listaPensamentos) => {
+    this.service.listar(this.paginaAtual, this.filtro, this.filtroMensagem, this.favoritos).subscribe((listaPensamentos) => {
       this.listaPensamentos = listaPensamentos
     })
   }
   filtrarFavoritos(){
+    this.titulo = "Meu Mural de Favoritos";
     var paginaAtual = 1;
     this.paginaAtual = paginaAtual;
     this.haMaisPensamentos = true;

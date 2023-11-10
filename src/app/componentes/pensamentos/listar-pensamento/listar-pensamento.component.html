@@ -36,7 +36,7 @@
     </button>
     </div>
   </header>
-  <h2 class="ff-inter">Meu Mural</h2>
+  <h2 class="ff-inter">{{titulo}}</h2>
   <div class="mural" *ngIf="listaPensamentos.length > 0, else semPensamentos">
     <div *ngFor="let pensamento of listaPensamentos">
       <app-pensamento
