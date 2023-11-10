@@ -14,7 +14,8 @@ O projeto foi feito de acordo os cursos;
 
 - Página Inicial
   
-![paginaInicial](https://github.com/luc05/Memoteca/assets/27972551/712175d8-8ecc-44ff-92a5-243169bdf344)
+![paginaInicial](https://github.com/luc05/Memoteca/assets/27972551/7e48b065-d6f3-41a8-858e-2bed3938abc8)
+)
 
 - Formulário de criação/edição de pensamentos
   
@@ -23,6 +24,10 @@ O projeto foi feito de acordo os cursos;
 # 🔨 Funcionalidades do projeto
 
 A aplicação possui todas as funcionalidades CRUD, criar, listar, editar e excluir pensamentos.
+
+Na tela inicial e possivel filtrar por palavra chave, ou por mensagem. Além de ser possivel favoritar e desfavoritar as mesmas.
+
+E existe 2 mural, o geral e um somente com os favoritos, que podem ser alternados ao clicar nos botões correspondentes.
 
 # Tecnologias utilizadas
 
