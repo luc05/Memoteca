@@ -25,9 +25,9 @@ O projeto foi feito de acordo os cursos;
 
 A aplicação possui todas as funcionalidades CRUD, criar, listar, editar e excluir pensamentos.
 
-Na tela inicial e possivel filtrar por palavra chave, ou por mensagem. Além de ser possivel favoritar e desfavoritar as mesmas.
+Na tela inicial e possível filtrar por palavra-chave, ou por mensagem. Além de ser possível favorita e desfavorita as mesmas.
 
-E existe 2 mural, o geral e um somente com os favoritos, que podem ser alternados ao clicar nos botões correspondentes.
+E existe 2 murais, o geral e um somente com os favoritos, que podem ser alternados ao clicar nos botões correspondentes.
 
 # Tecnologias utilizadas
 
