@@ -15,7 +15,6 @@ O projeto foi feito de acordo os cursos;
 - Página Inicial
   
 ![paginaInicial](https://github.com/luc05/Memoteca/assets/27972551/7e48b065-d6f3-41a8-858e-2bed3938abc8)
-)
 
 - Formulário de criação/edição de pensamentos
   
@@ -38,9 +37,9 @@ E existe 2 murais, o geral e um somente com os favoritos, que podem ser alternad
 -HTML
 -CSS
 
-Na criação formúlario foi usado a classe [FormBuilder], para torna-lo reativo.
+Na criação formulário foi usado a classe [FormBuilder], para torna-lo reativo.
 
-Foi usado a diretiva [FormGroup], para fazer a ligação desse formúlario ao form do HTML.
+Foi usado a diretiva [FormGroup], para fazer a ligação desse formulário ao form do HTML.
 
 E a propriedade [FormControlName] em cada um dos atributos.
 
